@@ -1,0 +1,139 @@
+---
+url: /about/
+---
+
+{% set css %}
+{% include "main.css" %}
+{% endset %}
+
+<style>
+    {{css | cssmin | safe}}
+</style>
+
+<html lang="en-us">
+    <!-- You found a secret link. Nice work! /fun/ -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="{{ description }}">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ description }}">
+        <!-- <meta property=" og:url" content="/about/"> -->
+        <meta property="og:type" content="website">
+        <!-- <meta property="og:image" content="/img/og.png"> -->
+        <!-- <meta property="og:image:alt" content="Logo"> -->
+
+        <title>{{ title }}</title>
+
+        <!-- 
+        <link rel="shortcut icon" href="/img/favicon.ico">
+        <link rel="icon" sizes="16x16 32x32" href="/img/favicon.ico">
+
+        <link rel="alternate" type="application/rss+xml" title="Diino Does RSS Feed"
+            href="/feed/index.xml">
+        <link rel="feed" type="application/rss+xml" title="Diino Does RSS Feed"
+            href="/feed/index.xml"> -->
+    </head>
+
+    <body class="type-page page-single">
+
+        <div class="container container-large">
+
+            {# <a class="screen-reader screen-reader-focusable" href="#main">Skip to main content</a> #}
+
+            {# <a class="screen-reader screen-reader-focusable"
+            href="mailto:branjwong@hey.com?subject=Diino%20Does:%20Accessibility%20Feedback">Accessibility
+            Feedback</a> #}
+
+        </div>
+
+        <header class="container container-large margin-bottom-large">
+            <nav class="nav-wrap">
+                <a class="logo" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="0.8em" width="0.8em" viewBox="0 0 16 16"
+                    aria-hidden="true">
+                        <path fill="currentColor"
+                        d="M14 9v2.066c-1.258 1.285-3.016 2.526-5 2.852V8.001h3v-1L9 5.83A3.001 3.001 0 0 0 8 .001 3 3 0 0 0 7 5.83L4 7.001v1h3v5.917c-1.984-.326-3.742-1.567-5-2.852V9H0v1c0 2 4 6 8 6s8-4 8-6V9h-2zM9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                    </svg>
+                Diino Does
+            </a>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav">
+                        <li>
+                            <a aria-current="page" href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/web">Web</a>
+                        </li>
+                        <li>
+                            <a href="/tutoring">Tutoring</a>
+                        </li>
+                        <li>
+                            <a href="/consulting">Consulting</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+        <main id="main" tabindex="-1">
+
+            <div class="container">
+                {{ content | safe }}
+            </div>
+        </main>
+
+        <footer class="container container-large">
+            <hr class="margin-bottom">
+            <nav class="tabindex nav-secondary" id="nav-secondary" tabindex="-1">
+                <ul class="list-inline list-inline-responsive">
+                    <li>
+                        <a aria-current="page" href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/web">Web</a>
+                    </li>
+                    <li>
+                        <a href="/tutoring">Tutoring</a>
+                    </li>
+                    <li>
+                        <a href="/consulting">Consulting</a>
+                    </li>
+                    <li>
+                        <a href="/search" aria-label="Search">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg" height="0.9em" width="0.9em" viewBox="0 0 32 32">
+                                <path fill="currentColor"
+                                d="M31.008 27.23l-7.58-6.446c-.784-.705-1.622-1.03-2.3-.998C22.92 17.69 24 14.97 24 12 24 5.37 18.627 0 12 0S0 5.37 0 12c0 6.626 5.374 12 12 12 2.973 0 5.692-1.082 7.788-2.87-.03.676.293 1.514.998 2.298l6.447 7.58c1.105 1.226 2.908 1.33 4.008.23s.997-2.903-.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="text-small">Made with ❤️ in Vancouver. Unless otherwise noted, all code is free to use under the <a href="/mit">MIT License</a>.
+            </p>
+        </footer>
+
+        <script>
+            /* ! dd v0.0.0 | (c) 2024 Brandon Wong | MIT License | http://github.com/branjwong/diion-does | Credits: http://github.com/cferdinandi/go-make-things */
+            !function () {
+                "use strict";
+                navigator && navigator.serviceWorker && navigator
+                    .serviceWorker
+                    .register("/sw.js"),
+                navigator.serviceWorker.controller && window.addEventListener("load", (function () {
+                    navigator
+                        .serviceWorker
+                        .controller
+                        .postMessage("cleanUp")
+                }))
+            }();
+        </script>
+    </body>
+
+</html>
