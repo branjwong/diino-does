@@ -62,3 +62,11 @@ article {
     text-decoration-line: none;
     color: var(--nav-text-color);
 }
+
+.nav-secondary a {
+    text-decoration: none;
+}
+
+.margin-right {
+    margin-right: .25em;
+}
