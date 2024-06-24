@@ -26,6 +26,18 @@
 
     list-style-type: "";
     margin-left: 0;
+
+}
+
+.nav a {
+    color: #e5e5e5;
+
+    text-decoration: none;
+}
+
+.nav li {
+    display: inline-block;
+    margin-left: 1em;
 }
 
 article {
@@ -33,4 +45,8 @@ article {
     margin-right: auto;
     max-width: var(--article-max-width);
     width: var(--article-width);
+}
+
+[aria-current="page"] {
+    border-bottom: .125em solid #e5e5e5;
 }

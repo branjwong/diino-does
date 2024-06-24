@@ -64,16 +64,16 @@ url: /about/
                 <div class="nav-menu" id="nav-menu">
                     <ul class="nav">
                         <li>
-                            <a aria-current="page" href="/about">About</a>
+                            <a {{ 'aria-current="page"' | safe if '/about' in page.url }}  href="/about">About</a>
                         </li>
                         <li>
-                            <a href="/web">Web</a>
+                            <a {{ 'aria-current="page"' | safe if '/web' in page.url  }} href="/web">Web</a>
                         </li>
                         <li>
-                            <a href="/tutoring">Tutoring</a>
+                            <a {{ 'aria-current="page"' | safe if '/tutoring' in page.url }} href="/tutoring">Tutoring</a>
                         </li>
                         <li>
-                            <a href="/consulting">Consulting</a>
+                            <a {{ 'aria-current="page"' | safe if '/consulting' in page.url }} href="/consulting">Consulting</a>
                         </li>
                     </ul>
 
