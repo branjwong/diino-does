@@ -18,7 +18,13 @@ url: /about/
         <!-- <meta property="og:image" content="/img/og.png"> -->
         <!-- <meta property="og:image:alt" content="Logo"> -->
 
-        <title>{{ title }} | Diino Does</title>
+        <title>
+            {% if title == 'Home' %}
+                Diino Does
+            {% else %}
+                {{ title }} | Diino Does
+            {% endif %}
+        </title>
 
         <!-- 
         <link rel="shortcut icon" href="/img/favicon.ico">
