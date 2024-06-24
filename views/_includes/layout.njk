@@ -1,15 +1,6 @@
 ---
 url: /about/
 ---
-
-{% set css %}
-{% include "main.css" %}
-{% endset %}
-
-<style>
-    {{css | cssmin | safe}}
-</style>
-
 <html lang="en-us">
     <!-- You found a secret link. Nice work! /fun/ -->
 
@@ -37,6 +28,14 @@ url: /about/
             href="/feed/index.xml">
         <link rel="feed" type="application/rss+xml" title="Diino Does RSS Feed"
             href="/feed/index.xml"> -->
+
+        {% set css %}
+        {% include "main.css" %}
+        {% endset %}
+
+        <style>
+            {{css | cssmin | safe}}
+        </style>
     </head>
 
     <body class="type-page page-single">
