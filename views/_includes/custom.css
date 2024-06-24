@@ -4,6 +4,7 @@
 :root {
     --article-width: 88%;
     --article-max-width: 45em;
+    --nav-text-color: #e5e5e5;
 }
 
 @media (min-width: 60em) {
@@ -30,9 +31,13 @@
 }
 
 .nav a {
-    color: #e5e5e5;
+    color: var(--nav-text-color);
 
     text-decoration: none;
+}
+
+.nav a:hover {
+    border-bottom: .125em solid var(--nav-text-color);
 }
 
 .nav li {
@@ -48,5 +53,12 @@ article {
 }
 
 [aria-current="page"] {
-    border-bottom: .125em solid #e5e5e5;
+    border-bottom: .125em solid var(--nav-text-color);
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration-line: none;
+    color: var(--nav-text-color);
 }
