@@ -5,6 +5,6 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    input: "_views"
+    dir: { input: "views" }
   }
 };
