@@ -4,13 +4,13 @@ https://www.11ty.dev/docs/quicktips/inline-css/
 [x] create landing page content
 [x] create about
 
-[ ] create nav bar
+[x] create nav bar
 
-[ ] take about photo
-[ ] create 404
-
+[x] create 404
 https://www.11ty.dev/docs/quicktips/not-found/
 
 [ ] create web
 [ ] create tutoring
 [ ] create small business consulting
+
+[ ] take about photo
